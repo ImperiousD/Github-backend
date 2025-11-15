@@ -145,24 +145,32 @@ while count > 0:
         
 ## Ejercicio 3
 
+# Pide al usuario 5 números enteros y los clasifica usando match-case
 contador_pequeno = 0
 contador_mediano = 0
 contador_grande = 0
 contador_cero = 0
 
-for i in range(5):
-    numero_ent = int(input(f"Escribe un numero de 5:{i + 1}"))
+for _ in range(5):
+  entrada = input("Escribe un numero entero: ")
+  try:
+    numero = int(entrada)
+  except ValueError:
+    print("Entrada no valida. Se tomara como 0.")
+    numero = 0
 
-    match numero_ent:
-        case "1":
-            print(f"Hay {answer} números en ésta categoría")
-        case "2":
-            print("Elegiste el idioma Ingles")
-        case "3":
-            print("Elegiste el idioma Frances")
-        case "4": ##_ Hay que ponerlo porque indica default
-            print("Idioma no valido")
+  match numero:
+    case 0:
+      contador_cero += 1
+    case n if n < 10:
+      contador_pequeno += 1
+    case n if 10 <= n <= 50:
+      contador_mediano += 1
+    case n if n > 50:
+      contador_grande += 1
 
-
-
+print(f"Intentos con valor 0: {contador_cero}")
+print(f"Numeros pequeños totales: {contador_pequeno}")
+print(f"Numeros medianos totales: {contador_mediano}")
+print(f"Numeros grandes totales: {contador_grande}")
 

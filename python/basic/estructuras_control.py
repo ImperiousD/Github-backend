@@ -34,4 +34,4 @@ match answer:
     case "3":
         print("Elegiste el idioma Frances")
     case _: ##_ Hay que ponerlo porque indica default
-        print("Idioma no valido") 
+        print("Idioma no valido")
