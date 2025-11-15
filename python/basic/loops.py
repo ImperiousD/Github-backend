@@ -146,31 +146,23 @@ while count > 0:
 ## Ejercicio 3
 
 # Pide al usuario 5 números enteros y los clasifica usando match-case
-contador_pequeno = 0
-contador_mediano = 0
-contador_grande = 0
-contador_cero = 0
+contador = {"Pequeño": 0, "Mediano": 0, "Grande": 0, "Cero": 0}
 
-for _ in range(5):
-  entrada = input("Escribe un numero entero: ")
-  try:
-    numero = int(entrada)
-  except ValueError:
-    print("Entrada no valida. Se tomara como 0.")
-    numero = 0
+for i in range(5):
+        n = int(input(f"Introduce el número: "))
+        match n:
+            case 0:
+                categoria = "Cero"
+            case n if n < 10:
+                categoria = "Pequeño"
+            case n if 10 <= n <= 50:
+                categoria = "Mediano"
+            case n if n > 50:
+                categoria = "Grande"
+        contador[categoria] += 1
+print(f"Cantidad de Cero: {contador['Cero']}")
+print(f"Cantidad de Pequeño: {contador['Pequeño']}")
+print(f"Cantidad de Mediano: {contador['Mediano']}")
+print(f"Cantidad de Grande: {contador['Grande']}")
 
-  match numero:
-    case 0:
-      contador_cero += 1
-    case n if n < 10:
-      contador_pequeno += 1
-    case n if 10 <= n <= 50:
-      contador_mediano += 1
-    case n if n > 50:
-      contador_grande += 1
-
-print(f"Intentos con valor 0: {contador_cero}")
-print(f"Numeros pequeños totales: {contador_pequeno}")
-print(f"Numeros medianos totales: {contador_mediano}")
-print(f"Numeros grandes totales: {contador_grande}")
-
+# contador[categoria] += 1 y el contador diccionario de arriba
