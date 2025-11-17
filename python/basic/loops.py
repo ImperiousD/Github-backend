@@ -128,7 +128,7 @@ for i in range(1, n + 1):
 
 ## Ejercicio 2
 
-""" password = "python123"
+"""password = "python123"
 count = 4
 
 while count > 0:
@@ -139,14 +139,13 @@ while count > 0:
         break
     elif count == 0:
         print("!Cuenta bloqueada!")
-        break
     elif user_password != password:
-        print(f"Contraseña incorrecta. Intentos restantes {count}") """
+        print(f"Contraseña incorrecta. Intentos restantes {count}")"""
         
 ## Ejercicio 3
 
 # Pide al usuario 5 números enteros y los clasifica usando match-case
-contador = {"Pequeño": 0, "Mediano": 0, "Grande": 0, "Cero": 0}
+"""contador = {"Pequeño": 0, "Mediano": 0, "Grande": 0, "Cero": 0}
 
 for i in range(5):
         n = int(input(f"Introduce el número: "))
@@ -163,6 +162,6 @@ for i in range(5):
 print(f"Cantidad de Cero: {contador['Cero']}")
 print(f"Cantidad de Pequeño: {contador['Pequeño']}")
 print(f"Cantidad de Mediano: {contador['Mediano']}")
-print(f"Cantidad de Grande: {contador['Grande']}")
+print(f"Cantidad de Grande: {contador['Grande']}")"""
 
 # contador[categoria] += 1 y el contador diccionario de arriba
