@@ -153,12 +153,12 @@ name = lambda name: print(f"Hola {name} como estas?")
 #Ejemplo"""
 
 """ def process(list, callback): 
-   process recibira una lista de elementos y una funcion (callback)
+  process recibira una lista de elementos y una funcion (callback)
       para cada uno de los elementos dentro de la lista, aplicara esa funcion que le pasamos
       y asi delvolvera una nueva lista con los elementos transformados
 
-   return [callback(item) for item in list]
-   este return nos devuelve una nueva lista que aplica un for a la lista original y transforma cada elemento con la funcion que le pasamos 
+  return [callback(item) for item in list]
+  este return nos devuelve una nueva lista que aplica un for a la lista original y transforma cada elemento con la funcion que le pasamos 
 
 numbers = [1,2,3,4,5,6,7,8,9,10]
 result = process(numbers, lambda item: item * 2)
@@ -169,9 +169,12 @@ print(result)  """
 #Ejercicio 2
 #Crear una función que reciba una lista de números y una función callback
 #y devuelva una nueva lista con los números transformados divididos entre 2 y luego mostrar los primos y no primos según la función callback
-list = [1,2,3,4,5,6,7,8,9,10]
+""" list = [1,2,3,4,5,6,7,8,9,10]
 
 def lista(list, callback):
   result = [callback(item) for item in list, lambda / item]
   print(list(result))
-
+  
+  lista(list, lambda item: item / 2)
+ """
+print("Hola mundo"
