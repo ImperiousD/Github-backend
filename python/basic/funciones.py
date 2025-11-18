@@ -15,13 +15,13 @@ def sayHelloAndShowVariable():
     print ("Hola muchachos")
     print (variable)
     # variable local no puede ser accedida desde cualquier parte del codigo
-    variableDos = 20
+    variableDos = 20"""
     
 
-def sum(num1, num2):
-    print("El resultado de la suma es: ", num1 + num2)
+""" def sum(num1, num2):
+    print("El resultado de la suma es: ", num1 + num2) """
     
-def say HelloUser(name):
+"""def say HelloUser(name):
     print(f"Hola {name}) """
     
     
@@ -44,9 +44,9 @@ saludo("Andreina", "Sanabria", "Colombia") """
 
 
 #Definir una funcion
-def sayHello():
+""" def sayHello():
   print("Hola Mundo")
-  
+   """
 #llamar a una funcion
 #sayHello()
 
@@ -86,36 +86,46 @@ sayHelloUser("Eduardo") """
 #crear una funcion saludo que salude a una persona por su nombre y apellido y mostrar el resultado por consola
 
 #podemos definir parametros con valores por defecto para que en caso de no recibir un valor se use el valor por defecto
-""" def saludo(name, lastname = "", country = "Venezuela"):
+"""def saludo(name, lastname = "", country = "Venezuela"):
   print(f"Hola {name} {lastname}, soy de {country}")
   
 saludo("Delvis", "Sivira")
 saludo("Andreina", "Sanabria", "Colombia")
-saludo("Eduardo", "Sanabria")
+saludo("Eduardo", "Sanabria")"""
 
-def sumTwoNumbers(num1, num2):
+""" def sumTwoNumbers(num1, num2):
   result = num1 + num2
   #Solo hay un return y solo se puede delvover un valor
   return result  
 
 sumResult = sumTwoNumbers(2, 3)
-print(sumResult) """
-
+print(sumResult)
+ """
 
 # Ejercicio
 # Define una función "calculator", que reciba dos numeros, y el tipo de operacion y segun el tipo de operacion la realice y retorne el resultado. luego muestra el resultado por consola 
 
-def calculator(num1 = "", num2 = "", simbolo = ""):
-        if simbolo == "+":
-            simbolo == num1 + num2
-        elif simbolo == "-":
-            simbolo == num1 - num2
-        elif simbolo == "*":
-            simbolo == num1 * num2
-        elif simbolo == "/":
-            simbolo == num1 / num2
-        elif simbolo == "%":
-            simbolo == num1 % num2
-        return simbolo
+""" num1 = 25
+num2 = 55
+simbolo = "div"
 
-calculator(25, 55, *)
+def calculator(num1, simbolo, num2):
+  if simbolo == "suma":
+    result = num1 + num2
+  elif simbolo == "resta":
+    result = num1 - num2
+  elif simbolo == "mult":
+    result = num1 * num2
+  elif simbolo == "div":
+    result = num1 / num2
+  elif simbolo == "prod":
+    result = num1 % num2
+  return result
+
+print(calculator(num1, simbolo, num2)) """
+
+# Estructura: variable = lambda parametros : operacion
+# #Crear una funcion lambda que salude
+
+saludo = lambda nombre: print("Hola", nombre)
+saludo("Eduardo")
