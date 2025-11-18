@@ -127,5 +127,51 @@ print(calculator(num1, simbolo, num2)) """
 # Estructura: variable = lambda parametros : operacion
 # #Crear una funcion lambda que salude
 
-saludo = lambda nombre: print("Hola", nombre)
-saludo("Eduardo")
+""" saludo = lambda nombre: print("Hola", nombre)
+saludo("Eduardo") """
+
+#Tipos de funciones
+
+#Funcion lambda
+
+#son funciones anonimas que nos permiten crear funciones en una sola linea
+
+#estructura: variable = lambda parametros : operacion
+
+""" sum = lambda num1, num2: print("El resultado de la suma es: ", num1 + num2)
+
+sum(1,2)
+  
+#Ejercicio 1 (si estas viendo la grabacion has esto y envialo 🥰)
+#Crear una funcion lambda que salude 
+
+name = lambda name: print(f"Hola {name} como estas?")
+
+#Funciones Callbacks 
+#Son funciones que se pasan como parametro a otras funciones
+
+#Ejemplo"""
+
+""" def process(list, callback): 
+   process recibira una lista de elementos y una funcion (callback)
+      para cada uno de los elementos dentro de la lista, aplicara esa funcion que le pasamos
+      y asi delvolvera una nueva lista con los elementos transformados
+
+   return [callback(item) for item in list]
+   este return nos devuelve una nueva lista que aplica un for a la lista original y transforma cada elemento con la funcion que le pasamos 
+
+numbers = [1,2,3,4,5,6,7,8,9,10]
+result = process(numbers, lambda item: item * 2)
+print(result)  """
+
+# Funciones generales: Son funciones que vienen por defecto en python para evitar la recursividad
+
+#Ejercicio 2
+#Crear una función que reciba una lista de números y una función callback
+#y devuelva una nueva lista con los números transformados divididos entre 2 y luego mostrar los primos y no primos según la función callback
+list = [1,2,3,4,5,6,7,8,9,10]
+
+def lista(list, callback):
+  result = [callback(item) for item in list, lambda / item]
+  print(list(result))
+
