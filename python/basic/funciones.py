@@ -46,7 +46,7 @@ saludo("Andreina", "Sanabria", "Colombia") """
 #Definir una funcion
 """ def sayHello():
   print("Hola Mundo")
-   """
+"""
 #llamar a una funcion
 #sayHello()
 
@@ -100,7 +100,7 @@ saludo("Eduardo", "Sanabria")"""
 
 sumResult = sumTwoNumbers(2, 3)
 print(sumResult)
- """
+"""
 
 # Ejercicio
 # Define una función "calculator", que reciba dos numeros, y el tipo de operacion y segun el tipo de operacion la realice y retorne el resultado. luego muestra el resultado por consola 
@@ -169,12 +169,10 @@ print(result)  """
 #Ejercicio 2
 #Crear una función que reciba una lista de números y una función callback
 #y devuelva una nueva lista con los números transformados divididos entre 2 y luego mostrar los primos y no primos según la función callback
-""" list = [1,2,3,4,5,6,7,8,9,10]
+list = [1,2,3,4,5,6,7,8,9,10]
 
 def lista(list, callback):
-  result = [callback(item) for item in list, lambda / item]
+  [callback(item) for item in list item / 2]
   print(list(result))
   
   lista(list, lambda item: item / 2)
- """
-print("Hola mundo"
