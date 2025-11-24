@@ -166,6 +166,101 @@ print(result)  """
 
 # Funciones generales: Son funciones que vienen por defecto en python para evitar la recursividad
 
+#Ejercicio
+# Enunciado:  
+# Define una función "calculator", que reciba dos numeros, y el tipo de operacion y segun el tipo de operacion la realice y retorne el resultado. luego muestra el resultado por consola
+
+#definimos la funcion con retorno
+def calculator(num1, num2, operation):
+  if operation == "+":
+    return num1 + num2
+  elif operation == "-":
+    return num1 - num2
+  elif operation == "*":
+    return num1 * num2
+  elif operation == "/":
+    return num1 / num2
+  
+result = calculator(1,2,"*") # 2
+print(result)
+
+#Tipos de funciones
+
+#Funcion lambda
+
+#son funciones anonimas que nos permiten crear funciones en una sola linea
+
+#estructura: variable = lambda parametros : operacion
+
+sum = lambda num1, num2: print("El resultado de la suma es: ", num1 + num2)
+
+sum(1,2)
+  
+#Ejercicio 1 (si estas viendo la grabacion has esto y envialo 🥰)
+#Crear una funcion lambda que salude 
+
+name = lambda name: print(f"Hola {name} como estas?")
+
+#Funciones Callbacks 
+#Son funciones que se pasan como parametro a otras funciones
+
+#Ejemplo
+
+def process(list, callback):
+  """ process recibira una lista de elementos y una funcion (callback)
+      para cada uno de los elementos dentro de la lista, aplicara esa funcion que le pasamos
+      y asi delvolvera una nueva lista con los elementos transformados
+  """
+  return [callback(item) for item in list]
+  """ este return nos devuelve una nueva lista que aplica un for a la lista original y transforma cada elemento con la funcion que le pasamos """
+
+numbers = [1,2,3,4,5,6,7,8,9,10]
+result = process(numbers, lambda item: item * 2)
+print(result)
+
+#Ejercicio 2
+#Crear una funcion que reciba una lista de numeros y una funcion callback
+#y devuelva una nueva lista con los numeros transformados divididos entre 2 y luego mostrar los primos y no primos segun la funcion callback
+
+def primeNumbers(number):
+  if number <=1:
+    return f"El numero {number} no es primo"
+  for i in range(2, number):
+    if number % i == 0:
+      return f"El numero {number} no es primo"
+  return f"El numero {number} es primo"
+
+print(primeNumbers(7))
+
+def transformAndClasificate(list, callback):
+  transformList= [int(n/2)for n in list]
+  for i in transformList:
+    print(callback(i))
+    
+listOfNumbers = [1,2,3,4,5,6,7,8,9,10]
+transformAndClasificate(listOfNumbers, primeNumbers)
+
+
+def primeNumbersAle(number):
+  if number <=1:
+    return False
+  for i in range(2, number):
+    if number % i == 0:
+      return False
+  return True
+
+def transformAndClasificateAle(list, callback):
+  
+  transformList= [int(n/2)for n in list]
+  prime = [n for n in transformList if callback(n)]
+  notPrime = [n for n in transformList if not callback(n)]
+  print(f"Los numeros primos son: {prime}")
+  print(f"Los numeros no primos son: {notPrime}")
+    
+listOfNumbers = [1,2,3,4,5,6,7,8,9,10]
+transformAndClasificateAle(listOfNumbers, primeNumbers)
+
+
 #Ejercicio 2
 #Crear una función que reciba una lista de números y una función callback
 #y devuelva una nueva lista con los números transformados divididos entre 2 y luego mostrar los primos y no primos según la función callback
