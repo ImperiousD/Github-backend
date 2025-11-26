@@ -270,10 +270,8 @@ def lista(list, callback):
   [callback(item) for item in list item / 2]
   print(list(result))
   
-  lista(list, lambda item: item / 2)
- """
- 
- #Ejercicio 2
+  lista(list, lambda item: item / 2)"""
+#Ejercicio 2
 #Crear una funcion que reciba una lista de numeros y una funcion callback
 #y devuelva una nueva lista con los numeros transformados divididos entre 2 y luego mostrar los primos y no primos segun la funcion callback
 
@@ -284,11 +282,11 @@ myList = [1,2,3,4,5]
 def multiplyBy(number):
   return number * 3
 
-·aplicando la funcion de multiplyBy a cada elemento de mylist usando map
+#aplicando la funcion de multiplyBy a cada elemento de mylist usando map
 result = map(multiplyBy,myList)
 
 print(f"El resultado de map es: {list(result)}")
-print(f"El resultado de map es: {list(resulTwo)}")
+""" print(f"El resultado de map es: {list(resulTwo)}") """
 
 # la funcion reduce aplica una funcion de reduccion a los elementos de un iterable
 
