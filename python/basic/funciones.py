@@ -241,25 +241,6 @@ listOfNumbers = [1,2,3,4,5,6,7,8,9,10]
 transformAndClasificate(listOfNumbers, primeNumbers)
 
 
-def primeNumbersAle(number):
-  if number <=1:
-    return False
-  for i in range(2, number):
-    if number % i == 0:
-      return False
-  return True
-
-def transformAndClasificateAle(list, callback):
-  
-  transformList= [int(n/2)for n in list]
-  prime = [n for n in transformList if callback(n)]
-  notPrime = [n for n in transformList if not callback(n)]
-  print(f"Los numeros primos son: {prime}")
-  print(f"Los numeros no primos son: {notPrime}")
-    
-listOfNumbers = [1,2,3,4,5,6,7,8,9,10]
-transformAndClasificateAle(listOfNumbers, primeNumbers)
-
 
 #Ejercicio 2
 #Crear una función que reciba una lista de números y una función callback
