@@ -110,7 +110,7 @@ print(f"El mayor de ambosa valores es: {min(224,449,568,974)}")
 
 # Funciones para realizar operaciones matematicas
 
-#sum()
+#sum() Suma todos los elementos de un iterable
 
 print(f"La suma de los valores es: {sum([10,20,30,40,50])}")
 
