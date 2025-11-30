@@ -63,22 +63,26 @@ finally:
 
 num_list = (12,45,78,5213,36.58,98,65.59)
 
-def adding_num(list):
-        adition = sum(list)
-        print(f"La suma total es: {adition}")
-        return list != int or float
+def sum_numbers(number_list): #Version de Alfredo
+    total = 0
+    for num in number_list:
+        try:
+            total += int(num)  # Intentamos convertir cada elemento a float y sumarlo
+        except ValueError:
+            print(f"El elemento '{num}' no es un número y será ignorado.")
+    return total
+  
+result = sum_numbers([1, 2, 'a', 4, '5b', 6])  # Debería manejar los errores y devolver la suma de los números válidos
+
+#Utilizar filter y reduce para filtrar y sumar los números válidos en la lista
+from functools import reduce
+def is_number(value): # Version del profesor
     try:
-        
-    except TypeError:
-        print("Uno o mas valores de la lista no son elementos sumables")
-    finally:
-        print("El programa finalizó")
+        int(value)
+        return True
+    except ValueError:
+        return False
 
-
-adding_num(num_list)
-
-numbers = [1,2,3,4,5,6,7,8,9,10]
-def is_even(number):
-    return number % 2 == 0 #Esto para filter retornara True solo para los numeros pares
-even_numbers = filter(is_even, numbers)
-print(f"Números pares: {list(even_numbers)}")
+filtered_numbers = filter(is_number, [1, 2, 'a', 4, '5b', 6])
+result = reduce(lambda x, y: x + y, filtered_numbers) # type: ignore
+print("La suma de los números válidos es:", result)
